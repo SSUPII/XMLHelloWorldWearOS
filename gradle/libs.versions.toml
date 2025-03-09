@@ -1,0 +1,24 @@
+[versions]
+agp = "8.7.3"
+kotlin = "2.0.21"
+playServicesWearable = "19.0.0"
+wearToolingPreview = "1.0.0"
+coreSplashscreen = "1.0.1"
+appcompat = "1.7.0"
+wear = "1.3.0"
+coreKtx = "1.15.0"
+
+# You must remove "wear-tooling-preview" and "wear" libraries if you wish to compile for Android 4.4W (API 20) to Android Wear 1.3 (API 22)
+# This means loss of usable tools for WearOS like WearableRecyclerView, forcing you on standard View elements
+# It is not garanteed other libraries might have to be removed or downgraded to support those releases
+[libraries]
+play-services-wearable = { group = "com.google.android.gms", name = "play-services-wearable", version.ref = "playServicesWearable" }
+wear-tooling-preview = { group = "androidx.wear", name = "wear-tooling-preview", version.ref = "wearToolingPreview" }
+core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+wear = { group = "androidx.wear", name = "wear", version.ref = "wear"}
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

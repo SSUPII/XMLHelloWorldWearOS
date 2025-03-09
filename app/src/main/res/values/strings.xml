@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">XMLHelloWorldWearOS</string>
+    <string name="hello_world">From the Round world,\nHello, %1$s!</string>
+</resources>
